@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: crtk
+Version: 0.0.23
+Summary: Smart Contract Reverse Engineering Toolkits
+Home-page: https://github.com/hao-n/crtk
+Author: Hao-Nan Zhu
+Author-email: hao-n.zhu@outlook.com
+License: MIT
+Description: # crtk
+        Smart Contract Reverse Engineering Toolkits
+        
+        See [crtk.readthedocs.io](https://crtk.readthedocs.io/en/latest/).
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

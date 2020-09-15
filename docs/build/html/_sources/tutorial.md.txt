@@ -1,0 +1,9 @@
+# CRTK: Smart Contract Reverse Engineering Toolkits
+
+CRTK simplifies converting and parsing of Ethereum smart contracts, and providing more insights for reverse engineering researchers.
+
+## Geting Start
+
+## Contracts 
+
+## Utilities

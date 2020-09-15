@@ -1,0 +1,23 @@
+Utilities API Reference
+=======================
+This page gives the Python API reference of utilities in CRTK.
+
+.. contents::
+  :backlinks: none
+  :local:
+
+Utilities API
+-------------
+.. automodule:: crtk.utilities
+
+.. autofunction:: crtk.utilities.get_opcode_list
+
+.. autofunction:: crtk.utilities.collapse_opcode
+
+.. autofunction:: crtk.utilities.opcode_occurrence
+
+.. autofunction:: crtk.utilities.get_function_signatures_list
+
+.. autofunction:: crtk.utilities.check_ERC_standard
+
+.. autofunction:: crtk.utilities.split_bytecode

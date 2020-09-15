@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+crtk/Function-Signature.csv
+crtk/__init__.py
+crtk/contract.py
+crtk/creationcontract.py
+crtk/mapping.py
+crtk/runtimecontract.py
+crtk/utilities.py
+crtk.egg-info/PKG-INFO
+crtk.egg-info/SOURCES.txt
+crtk.egg-info/dependency_links.txt
+crtk.egg-info/requires.txt
+crtk.egg-info/top_level.txt
