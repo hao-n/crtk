@@ -27,7 +27,7 @@ copyright = '2020, Hao-Nan Zhu'
 author = 'Hao-Nan Zhu'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.23'
+release = '0.0.24'
 
 
 # -- General configuration ---------------------------------------------------

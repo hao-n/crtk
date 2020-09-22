@@ -5,7 +5,7 @@ with open('README.md', 'r') as f:
 
 setuptools.setup(
     name='crtk',
-    version='0.0.23',
+    version='0.0.24',
     author='Hao-Nan Zhu',
     license='MIT',
     author_email='hao-n.zhu@outlook.com',

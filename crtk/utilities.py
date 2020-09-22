@@ -256,22 +256,20 @@ def function_to_signature(function_name):
 
 def signature_to_function(function_signature):
     '''
-    Convert function signature to function definition by reverse query. See https://github.com/hao-n/Function-Signatures.
+    Convert function signature to function definition by reverse query. Credit to https://www.4byte.directory/
 
     input: string
     output: list
 
     There might be several query results if hash collision encountered and also might be no result due to data vacancy.
     '''
-    # dir_list = os.listdir('./')
-    # if not 'Function-Signatures' in dir_list:
-    #     import subprocess
-    #     subprocess.run(['git', 'clone', 'https://github.com/hao-n/Function-Signatures.git'])
 
-    import csv
-    with open('Function-Signature.csv', 'r') as f:
-        reader = csv.reader(f)
-        res = [line[0] for line in reader if line[1] == function_signature]
+    import requests
+    request_res = requests.get(
+        'https://www.4byte.directory/api/v1/signatures/?hex_signature={}'.format(function_signature)).json()
+    res = []
+    for item in request_res.json()['results']:
+        res.append(item['text_signature'])
     return res
 
 
