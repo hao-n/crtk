@@ -6,7 +6,7 @@
 # URL: <https://github.com/hao-n/crtk>
 # For license information, see LICENSE
 
-from crtk.utilities import opcode_occurrence
+from crtk.utilities import opcode_occurrence, get_function_definitions_list
 
 
 class Contract(object):
@@ -36,6 +36,7 @@ class Contract(object):
         return self.function_signatures
 
     def get_function_definition_list(self):
+        self.function_definitions = get_function_definitions_list(self.function_signatures)
         return self.function_definitions
 
     def get_opcode_occurrence(self, collapse=0):

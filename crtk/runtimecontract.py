@@ -26,7 +26,7 @@ class RuntimeContract(Contract):
 
         self.opcode = get_opcode_list(self.bytecode)
         self.function_signatures = get_function_signatures_list(self.opcode)
-        self.function_definitions = get_function_definitions_list(self.function_signatures)
+        self.function_definitions = []
 
         if len(self.function_signatures) > 0:
             self.real_contract = True

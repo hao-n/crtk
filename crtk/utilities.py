@@ -155,7 +155,7 @@ def get_function_signatures_list(opcode_list):
     function_signatures = []
     for i in range(len(opcode_list)):
         if opcode_list[i][1] == '80':
-            if opcode_list[i+1][1] == '63' and opcode_list[i+2][1] == '14' and (opcode_list[i+3][1] in push_mapping.keys()) and opcode_list[i+4][1] == '57':
+            if opcode_list[i+1][1][:2] == '63' and opcode_list[i+2][1] == '14' and (opcode_list[i+3][1][:2] in push_mapping.keys()) and opcode_list[i+4][1] == '57':
                 # found a function head here
                 function_name_hash = opcode_list[i+1][3]
                 function_signatures.append(function_name_hash)
@@ -265,10 +265,11 @@ def signature_to_function(function_signature):
     '''
 
     import requests
+    function_signature = fix_hex_string(function_signature)
     request_res = requests.get(
         'https://www.4byte.directory/api/v1/signatures/?hex_signature={}'.format(function_signature)).json()
     res = []
-    for item in request_res.json()['results']:
+    for item in request_res['results']:
         res.append(item['text_signature'])
     return res
 

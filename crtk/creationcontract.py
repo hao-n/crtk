@@ -6,7 +6,6 @@
 # URL: <https://github.com/hao-n/crtk>
 # For license information, see LICENSE
 
-# from crtk.contract import Contract
 from crtk.runtimecontract import RuntimeContract
 from crtk.contract import Contract
 from crtk.utilities import split_bytecode, get_opcode_list
@@ -33,7 +32,6 @@ class CreationContract(Contract):
         
         self.opcode_occurrence = self.runtime_contract.get_opcode_occurrence()
         self.function_signatures = self.runtime_contract.get_function_signature_list()
-        self.function_definitions = self.runtime_contract.get_function_definition_list()
 
         if len(self.function_signatures) > 0:
             self.real_contract = True
