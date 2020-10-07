@@ -28,13 +28,13 @@ def get_opcode_list(bytecode):
             loc = '0x'+str(hex(i//2))[2:].zfill(8)
             if code[0] != '6' and code[0] != '7':
                 # is not a push-like opcode
-                opcode = [loc, code, opcode_mapping.get(
+                opcode = [loc, '0x'+code, opcode_mapping.get(
                     code, '<------- ERROR'), '']
                 opcode_list.append(opcode)
             else:
                 # is a push-like opcode
                 push_skip_times = push_mapping[code]
-                opcode = [loc, code+bytecode[i+2:i+2+push_skip_times*2], opcode_mapping.get(
+                opcode = [loc, '0x'+code+bytecode[i+2:i+2+push_skip_times*2], opcode_mapping.get(
                     code, '<------- ERROR'), bytecode[i+2:i+2+push_skip_times*2]]
                 opcode_list.append(opcode)
         else:
